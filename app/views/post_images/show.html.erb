@@ -7,6 +7,9 @@
   <% if @post_image.user == current_user %>
   <%= link_to "削除", post_image_path(@post_image), method: :delete, "data-confirm"=> "Are You Sure?"%>
   <% end %>
+  <div id="favorites">
+    <%= render "favorites/favorite", post_image: @post_image %>
+  </div>
 </div> 
 
 <div class="commnets">
